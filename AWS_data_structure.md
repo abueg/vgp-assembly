@@ -25,6 +25,12 @@ Once we visit a VGP project, the top level folders are expected to have:
     <movie>.subreads.bam.pbi
     <movie>.scraps.bam (Optional for running QC plots)
     ```
+  * pacbio_hifi
+    ```
+    <movie>.hifi_reads.fastq.gz
+    <movie>.subreads.bam
+    <movie>.reads.bam (for runs where CCS was run on Sequel machine)
+    ```
   * 10x
     ```
     <genome_id>_S1_L001_I1_001.fastq.gz
@@ -40,7 +46,12 @@ Once we visit a VGP project, the top level folders are expected to have:
     ```
     <genome_id>_<runID>_R1.fastq.gz
     <genome_id>_<runID>_R2.fastq.gz
-    re_bases.txt	(ex. GATC,GANTC)
+    re_bases.txt	(ex. GATC,GANTC for Arima v1 prep and GATC,GANTC,CTNAG,TTAA for Arima v2)
+    ```
+  * dovetail (there is no re_bases.txt file because dovetail is enzyme-free)
+    ```
+    <genome_id>_<runID>_R1.fastq.gz
+    <genome_id>_<runID>_R2.fastq.gz
     ```
   * illumina (Optional)
     ```
